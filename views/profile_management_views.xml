@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The package form behind the Packages menu -->
+    <record id="view_profile_management_form_affiliate" model="ir.ui.view">
+        <field name="name">profile.management.form.affiliate</field>
+        <field name="model">profile.management</field>
+        <field name="inherit_id" ref="isd_profile_management.view_profile_management_form"/>
+        <field name="arch" type="xml">
+            <field name="total_cost" position="after">
+                <label for="product_id"/>
+                <div class="o_row">
+                    <field name="product_id" context="{'default_type': 'service', 'default_sale_ok': True}"/>
+                    <button name="action_create_product" type="object" string="Create from package"
+                            class="btn-link" icon="fa-plus" invisible="product_id"/>
+                </div>
+            </field>
+        </field>
+    </record>
+
+    <!-- The service package card form -->
+    <record id="view_service_package_form_affiliate" model="ir.ui.view">
+        <field name="name">profile.management.service.form.affiliate</field>
+        <field name="model">profile.management</field>
+        <field name="inherit_id" ref="isd_profile_management.view_service_package_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='total_cost']/.." position="after">
+                <div style="margin-bottom: 8px;">
+                    <span style="color: #495057; font-weight: 500;">Product:</span>
+                    <field name="product_id" class="ms-2" context="{'default_type': 'service', 'default_sale_ok': True}"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

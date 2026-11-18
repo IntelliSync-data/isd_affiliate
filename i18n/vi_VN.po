@@ -1,0 +1,765 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* isd_affiliate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-18 15:46+0000\n"
+"PO-Revision-Date: 2026-11-18 15:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_service_package_form_affiliate
+msgid "<span style=\"color: #495057; font-weight: 500;\">Product:</span>"
+msgstr "<span style=\"color: #495057; font-weight: 500;\">Sản phẩm:</span>"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_form_affiliate
+msgid "<strong>Affiliate</strong>"
+msgstr "<strong>Tiếp thị liên kết</strong>"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_form_affiliate
+msgid ""
+"A rejected affiliate has no link and their referrals stop counting. "
+"Continue?"
+msgstr "Người bị từ chối sẽ không còn link, và đơn họ giới thiệu không còn được ghi nhận. Tiếp tục?"
+
+#. module: isd_affiliate
+#: model:ir.model.fields.selection,name:isd_affiliate.selection__isd_affiliate_source__status__active
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_affiliate_source_search
+msgid "Active"
+msgstr "Đang dùng"
+
+#. module: isd_affiliate
+#: model_terms:ir.actions.act_window,help:isd_affiliate.action_affiliate_source
+msgid "Add a place affiliates share their links"
+msgstr "Thêm nơi người tiếp thị chia sẻ link"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_sale_order__affiliate_id
+#: model:ir.model.fields,field_description:isd_affiliate.field_user_profile__affiliate_id
+#: model:ir.model.fields.selection,name:isd_affiliate.selection__res_partner__company_type__affiliate
+#: model:ir.module.category,name:isd_affiliate.module_category_affiliate
+#: model:ir.ui.menu,name:isd_affiliate.menu_root
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_home_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_sales_order_filter_affiliate
+msgid "Affiliate"
+msgstr "Tiếp thị liên kết"
+
+#. module: isd_affiliate
+#: model:res.groups,name:isd_affiliate.group_affiliate_portal
+msgid "Affiliate (portal)"
+msgstr "Tiếp thị liên kết (portal)"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_partner__affiliate_code
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_users__affiliate_code
+msgid "Affiliate Code"
+msgstr "Mã thành viên"
+
+#. module: isd_affiliate
+#: model:res.groups,name:isd_affiliate.group_affiliate_manager
+msgid "Affiliate Manager"
+msgstr "Quản lý tiếp thị liên kết"
+
+#. module: isd_affiliate
+#: model:ir.model,name:isd_affiliate.model_isd_affiliate_source
+#: model:ir.model.fields,field_description:isd_affiliate.field_sale_order__affiliate_source_id
+#: model:ir.model.fields,field_description:isd_affiliate.field_user_profile__affiliate_source_id
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_sales_order_filter_affiliate
+msgid "Affiliate Source"
+msgstr "Nguồn tiếp thị"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_partner__affiliate_state
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_users__affiliate_state
+msgid "Affiliate Status"
+msgstr "Trạng thái tiếp thị"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Affiliate code"
+msgstr "Mã thành viên"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "Affiliate sign-up is closed at the moment."
+msgstr "Hiện chưa mở đăng ký tiếp thị liên kết."
+
+#. module: isd_affiliate
+#: model:ir.actions.act_window,name:isd_affiliate.action_affiliate
+#: model:ir.ui.menu,name:isd_affiliate.menu_affiliates
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_list_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_search_affiliate
+msgid "Affiliates"
+msgstr "Người tiếp thị"
+
+#. module: isd_affiliate
+#: model_terms:ir.actions.act_window,help:isd_affiliate.action_affiliate
+msgid ""
+"Affiliates appear here when they sign up on /affiliate/register, or when a "
+"contact is set to Affiliate."
+msgstr "Người tiếp thị xuất hiện ở đây khi họ đăng ký tại /affiliate/register, hoặc khi một liên hệ được đặt loại Tiếp thị liên kết."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Amount"
+msgstr "Số tiền"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/signup.py:0
+msgid "An account already exists for this email. Log in instead."
+msgstr "Email này đã có tài khoản. Hãy đăng nhập."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/models/res_partner.py:0
+msgid "An affiliate is a person, not a company."
+msgstr "Người tiếp thị là cá nhân, không phải công ty."
+
+#. module: isd_affiliate
+#: model:ir.model.constraint,message:isd_affiliate.constraint_isd_affiliate_source_key_unique
+msgid "Another source already uses this key."
+msgstr "Key này đã được nguồn khác dùng."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+msgid ""
+"Anyone can register as an affiliate on /affiliate/register. Affiliates are "
+"portal users: they never get into the back office."
+msgstr "Ai cũng đăng ký làm người tiếp thị được tại /affiliate/register. Họ là user portal: không bao giờ vào được trang quản trị."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_form_affiliate
+msgid "Approve"
+msgstr "Duyệt"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_config_settings__isd_affiliate_require_approval
+msgid "Approve New Affiliates"
+msgstr "Duyệt người tiếp thị mới"
+
+#. module: isd_affiliate
+#: model:ir.model.fields.selection,name:isd_affiliate.selection__res_partner__affiliate_state__approved
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_search_affiliate
+msgid "Approved"
+msgstr "Đã duyệt"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_search_affiliate
+msgid "Archived"
+msgstr "Đã lưu trữ"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+msgid "Base URL"
+msgstr "Base URL"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.login_affiliate_link
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "Become an affiliate"
+msgstr "Đăng ký tiếp thị liên kết"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_partner__company_type
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_users__company_type
+msgid "Company Type"
+msgstr "Loại liên hệ"
+
+#. module: isd_affiliate
+#: model:ir.model,name:isd_affiliate.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình"
+
+#. module: isd_affiliate
+#: model:ir.ui.menu,name:isd_affiliate.menu_configuration
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "Confirm password"
+msgstr "Nhập lại mật khẩu"
+
+#. module: isd_affiliate
+#: model:ir.model,name:isd_affiliate.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Copy"
+msgstr "Sao chép"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/signup.py:0
+msgid "Could not create your account. Please try again."
+msgstr "Không tạo được tài khoản. Vui lòng thử lại."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/models/res_partner.py:0
+msgid "Could not find a free affiliate code, please try again."
+msgstr "Không tìm được mã thành viên còn trống, vui lòng thử lại."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_user_profile_form_affiliate
+msgid "Create Sale Order"
+msgstr "Tạo đơn bán hàng"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_profile_management_form_affiliate
+msgid "Create from package"
+msgstr "Tạo từ gói"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__create_uid
+msgid "Created by"
+msgstr "Người tạo"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Date"
+msgstr "Ngày"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+msgid "Each link adds <code>?ref=&lt;code&gt;&amp;ssm=&lt;source&gt;</code>."
+msgstr "Mỗi link thêm <code>?ref=&lt;mã&gt;&amp;ssm=&lt;nguồn&gt;</code>."
+
+#. module: isd_affiliate
+#: model_terms:ir.actions.act_window,help:isd_affiliate.action_affiliate_source
+msgid ""
+"Each source gives a link of its own, so you can tell TikTok sales from "
+"Facebook ones."
+msgstr "Mỗi nguồn có link riêng, nên phân biệt được đơn đến từ TikTok hay Facebook."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "Email"
+msgstr "Email"
+
+#. module: isd_affiliate
+#: model:isd.affiliate.source,name:isd_affiliate.source_facebook
+msgid "Facebook"
+msgstr "Facebook"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_sales_order_filter_affiliate
+msgid "From an Affiliate"
+msgstr "Từ người tiếp thị"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "Full name"
+msgstr "Họ tên"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "General link"
+msgstr "Link chung"
+
+#. module: isd_affiliate
+#: model:res.groups,comment:isd_affiliate.group_affiliate_portal
+msgid ""
+"Given to affiliates who sign up. Their own page only, on /my/affiliate."
+msgstr "Cấp cho người tiếp thị tự đăng ký. Chỉ xem trang riêng của mình tại /my/affiliate."
+
+#. module: isd_affiliate
+#: model:ir.model.fields,help:isd_affiliate.field_isd_affiliate_source__key
+msgid ""
+"Goes into the link as ssm=<key>. Lowercase letters, digits, - and _ only."
+msgstr "Nằm trong link dưới dạng ssm=<key>. Chỉ chữ thường, số, - và _."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_search_affiliate
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "I agree to the affiliate terms"
+msgstr "Tôi đồng ý với điều khoản tiếp thị liên kết"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "I already have an account"
+msgstr "Tôi đã có tài khoản"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__id
+msgid "ID"
+msgstr "ID"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: isd_affiliate
+#: model:ir.model.fields.selection,name:isd_affiliate.selection__isd_affiliate_source__status__inactive
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_affiliate_source_search
+msgid "Inactive"
+msgstr "Ngưng dùng"
+
+#. module: isd_affiliate
+#: model:isd.affiliate.source,name:isd_affiliate.source_instagram
+msgid "Instagram"
+msgstr "Instagram"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_partner__is_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_users__is_affiliate
+msgid "Is an Affiliate"
+msgstr "Là người tiếp thị"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_list_affiliate
+msgid "Joined"
+msgstr "Ngày tham gia"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__key
+msgid "Key"
+msgstr "Key"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật bởi"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lúc"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,help:isd_affiliate.field_res_config_settings__isd_affiliate_signup_enabled
+msgid "Lets anyone register as an affiliate on /affiliate/register"
+msgstr "Cho phép ai cũng đăng ký làm người tiếp thị tại /affiliate/register"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_partner__affiliate_source_id
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_users__affiliate_source_id
+msgid "Link Source"
+msgstr "Nguồn của link"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/models/user_profile.py:0
+msgid "Link a product to the package first."
+msgstr "Hãy gắn sản phẩm cho gói trước."
+
+#. module: isd_affiliate
+#: model:res.groups,comment:isd_affiliate.group_affiliate_manager
+msgid ""
+"Manages affiliates, sources and approvals, and sees the orders they "
+"referred."
+msgstr "Quản lý người tiếp thị, nguồn và việc duyệt, xem các đơn họ giới thiệu."
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__name
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_list_affiliate
+msgid "Name"
+msgstr "Tên"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+msgid ""
+"New affiliates wait for a manager to approve them. Until then they have no "
+"link and their referrals are not counted."
+msgstr "Người tiếp thị mới phải chờ quản lý duyệt. Trước đó họ chưa có link và đơn họ giới thiệu chưa được ghi nhận."
+
+#. module: isd_affiliate
+#: model:ir.model.fields,help:isd_affiliate.field_res_config_settings__isd_affiliate_require_approval
+msgid ""
+"New affiliates wait for a manager: until then they have no link and their "
+"referrals are not counted"
+msgstr "Người tiếp thị mới phải chờ quản lý duyệt: trước đó họ chưa có link và đơn họ giới thiệu chưa được ghi nhận"
+
+#. module: isd_affiliate
+#: model_terms:ir.actions.act_window,help:isd_affiliate.action_affiliate
+msgid "No affiliate yet"
+msgstr "Chưa có người tiếp thị nào"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_form_affiliate
+msgid ""
+"No link yet: set the base URL in Affiliate › Configuration, and approve the "
+"affiliate."
+msgstr "Chưa có link: hãy nhập Base URL ở Tiếp thị liên kết › Cấu hình, và duyệt người tiếp thị này."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "No orders yet. Share your link to get started."
+msgstr "Chưa có đơn nào. Hãy chia sẻ link để bắt đầu."
+
+#. module: isd_affiliate
+#: model:ir.model.fields,help:isd_affiliate.field_isd_affiliate_source__status
+msgid "Only active sources can be picked for a link"
+msgstr "Chỉ nguồn đang dùng mới chọn được cho link"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,help:isd_affiliate.field_res_partner__affiliate_state
+#: model:ir.model.fields,help:isd_affiliate.field_res_users__affiliate_state
+msgid ""
+"Only an approved affiliate has links, and only their referrals are counted"
+msgstr "Chỉ người đã duyệt mới có link, và chỉ đơn họ giới thiệu mới được ghi nhận"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_config_settings__isd_affiliate_signup_enabled
+msgid "Open Sign-up"
+msgstr "Mở đăng ký"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,help:isd_affiliate.field_profile_management__product_id
+msgid "Orders of this package also become Sale Orders of this product"
+msgstr "Đơn của gói này đồng thời thành đơn bán hàng của sản phẩm này"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Orders you referred"
+msgstr "Đơn bạn đã giới thiệu"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_user_profile__package_has_product
+msgid "Package Has Product"
+msgstr "Gói có sản phẩm"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Paid orders total"
+msgstr "Tổng tiền đơn đã thanh toán"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "Password"
+msgstr "Mật khẩu"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/signup.py:0
+msgid "Please accept the terms to continue."
+msgstr "Vui lòng đồng ý điều khoản để tiếp tục."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/signup.py:0
+msgid "Please enter a valid email address."
+msgstr "Vui lòng nhập email hợp lệ."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/signup.py:0
+msgid "Please enter your name."
+msgstr "Vui lòng nhập họ tên."
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_profile_management__product_id
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: isd_affiliate
+#: model:ir.model,name:isd_affiliate.model_profile_management
+msgid "Profile Management"
+msgstr "Profile Management"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_sale_order__profile_order_id
+msgid "Profile Order"
+msgstr "Đơn Profile"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_partner__affiliate_link
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_users__affiliate_link
+msgid "Referral Link"
+msgstr "Link giới thiệu"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_config_settings__isd_affiliate_base_url
+msgid "Referral Link Base URL"
+msgstr "Base URL của link giới thiệu"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Referral link"
+msgstr "Link giới thiệu"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Referral link for"
+msgstr "Link giới thiệu cho"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+msgid "Referral links"
+msgstr "Link giới thiệu"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Referral links are not ready yet. Please check back soon."
+msgstr "Link giới thiệu chưa sẵn sàng. Vui lòng quay lại sau."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_form_affiliate
+msgid "Referred"
+msgstr "Đã giới thiệu"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/models/res_partner.py:0
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_partner__affiliate_sale_count
+#: model:ir.model.fields,field_description:isd_affiliate.field_res_users__affiliate_sale_count
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_list_affiliate
+msgid "Referred Orders"
+msgstr "Đơn đã giới thiệu"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Referred orders"
+msgstr "Đơn đã giới thiệu"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_form_affiliate
+msgid "Reject"
+msgstr "Từ chối"
+
+#. module: isd_affiliate
+#: model:ir.model.fields.selection,name:isd_affiliate.selection__res_partner__affiliate_state__rejected
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_search_affiliate
+msgid "Rejected"
+msgstr "Bị từ chối"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_user_profile__sale_order_id
+msgid "Sale Order"
+msgstr "Đơn bán hàng"
+
+#. module: isd_affiliate
+#: model:ir.model,name:isd_affiliate.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn bán hàng"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__sequence
+msgid "Sequence"
+msgstr "Thứ tự"
+
+#. module: isd_affiliate
+#: model:ir.actions.act_window,name:isd_affiliate.action_affiliate_config
+msgid "Settings"
+msgstr "Cài đặt"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
+msgid "Sign up"
+msgstr "Đăng ký"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+msgid "Sign-up"
+msgstr "Đăng ký"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_affiliate_source_form
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: isd_affiliate
+#: model:ir.actions.act_window,name:isd_affiliate.action_affiliate_source
+#: model:ir.ui.menu,name:isd_affiliate.menu_sources
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_affiliate_source_list
+msgid "Sources"
+msgstr "Nguồn"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__status
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_search_affiliate
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/models/user_profile.py:0
+msgid "The Sale Order could not be created. The server log has the details."
+msgstr "Không tạo được đơn bán hàng. Chi tiết nằm trong log máy chủ."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/models/affiliate_source.py:0
+msgid ""
+"The key \"%s\" can only hold lowercase letters, digits, - and _, because it "
+"goes into a web address."
+msgstr "Key \"%s\" chỉ được có chữ thường, số, - và _, vì nó nằm trong địa chỉ web."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_affiliate_source_form
+msgid ""
+"The key goes into each referral link as <code>ssm=&lt;key&gt;</code>. It is filled in from the\n"
+"                        name and can be changed."
+msgstr "Key nằm trong mỗi link giới thiệu dưới dạng <code>ssm=&lt;key&gt;</code>. Key được điền tự động từ tên và sửa được."
+
+#. module: isd_affiliate
+#: model:ir.model.fields,help:isd_affiliate.field_res_partner__affiliate_source_id
+#: model:ir.model.fields,help:isd_affiliate.field_res_users__affiliate_source_id
+msgid "The network the link below is made for"
+msgstr "Mạng xã hội mà link bên dưới dành cho"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/signup.py:0
+msgid "The password needs at least %s characters."
+msgstr "Mật khẩu cần ít nhất %s ký tự."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/signup.py:0
+msgid "The two passwords do not match."
+msgstr "Hai mật khẩu không khớp."
+
+#. module: isd_affiliate
+#: model:ir.model.constraint,message:isd_affiliate.constraint_res_partner_affiliate_code_unique
+msgid "This affiliate code is already used."
+msgstr "Mã thành viên này đã được dùng."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/models/user_profile.py:0
+msgid "This order already has a Sale Order."
+msgstr "Đơn này đã có đơn bán hàng."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/models/profile_management.py:0
+msgid "This package already has a product."
+msgstr "Gói này đã có sản phẩm."
+
+#. module: isd_affiliate
+#: model:isd.affiliate.source,name:isd_affiliate.source_tiktok
+msgid "TikTok"
+msgstr "TikTok"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/signup.py:0
+msgid "Too many sign-ups from this address. Please try again later."
+msgstr "Có quá nhiều lượt đăng ký từ địa chỉ này. Vui lòng thử lại sau."
+
+#. module: isd_affiliate
+#: model:ir.model,name:isd_affiliate.model_user_profile
+msgid "User Profile Assignment"
+msgstr "Đơn Profile"
+
+#. module: isd_affiliate
+#: model:ir.model.fields.selection,name:isd_affiliate.selection__res_partner__affiliate_state__pending
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_search_affiliate
+msgid "Waiting for Approval"
+msgstr "Chờ duyệt"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Waiting for approval"
+msgstr "Chờ duyệt"
+
+#. module: isd_affiliate
+#: model:isd.affiliate.source,name:isd_affiliate.source_website
+msgid "Website"
+msgstr "Website"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_affiliate_source_form
+msgid "Where and how affiliates use this source"
+msgstr "Người tiếp thị dùng nguồn này ở đâu và thế nào"
+
+#. module: isd_affiliate
+#: model:ir.model.fields,help:isd_affiliate.field_res_config_settings__isd_affiliate_base_url
+msgid ""
+"Where referral links point, e.g. https://bloompod.vn. Each link adds "
+"?ref=<code>&ssm=<source>."
+msgstr "Nơi link giới thiệu trỏ tới, ví dụ https://bloompod.vn. Mỗi link thêm ?ref=<mã>&ssm=<nguồn>."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+msgid ""
+"Where referral links point. This does not change Odoo's own web address."
+msgstr "Nơi link giới thiệu trỏ tới. Không thay đổi địa chỉ web của Odoo."
+
+#. module: isd_affiliate
+#: model:isd.affiliate.source,name:isd_affiliate.source_youtube
+msgid "YouTube"
+msgstr "YouTube"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid ""
+"Your account is waiting for approval. Your referral links appear here once "
+"it is approved."
+msgstr "Tài khoản của bạn đang chờ duyệt. Link giới thiệu sẽ hiện ở đây khi được duyệt."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid ""
+"Your affiliate account was not approved. Please contact us for details."
+msgstr "Tài khoản tiếp thị của bạn không được duyệt. Vui lòng liên hệ chúng tôi để biết thêm."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_home_affiliate
+msgid "Your code, your referral links and the orders they brought"
+msgstr "Mã của bạn, link giới thiệu và các đơn mang về"
+
+#. module: isd_affiliate
+#: model:isd.affiliate.source,name:isd_affiliate.source_zalo
+msgid "Zalo"
+msgstr "Zalo"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_affiliate_source_form
+msgid "e.g. TikTok"
+msgstr "ví dụ: TikTok"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
+msgid "https://bloompod.vn"
+msgstr ""
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.view_affiliate_source_form
+msgid "tiktok"
+msgstr ""

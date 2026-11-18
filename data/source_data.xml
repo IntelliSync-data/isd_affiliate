@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="source_facebook" model="isd.affiliate.source">
+        <field name="name">Facebook</field>
+        <field name="key">facebook</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="source_tiktok" model="isd.affiliate.source">
+        <field name="name">TikTok</field>
+        <field name="key">tiktok</field>
+        <field name="sequence">20</field>
+    </record>
+    <record id="source_instagram" model="isd.affiliate.source">
+        <field name="name">Instagram</field>
+        <field name="key">instagram</field>
+        <field name="sequence">30</field>
+    </record>
+    <record id="source_youtube" model="isd.affiliate.source">
+        <field name="name">YouTube</field>
+        <field name="key">youtube</field>
+        <field name="sequence">40</field>
+    </record>
+    <record id="source_zalo" model="isd.affiliate.source">
+        <field name="name">Zalo</field>
+        <field name="key">zalo</field>
+        <field name="sequence">50</field>
+    </record>
+    <record id="source_website" model="isd.affiliate.source">
+        <field name="name">Website</field>
+        <field name="key">website</field>
+        <field name="sequence">60</field>
+    </record>
+</odoo>

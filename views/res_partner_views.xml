@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The contact form: affiliate code, status and links, for affiliates only -->
+    <record id="view_partner_form_affiliate" model="ir.ui.view">
+        <field name="name">res.partner.form.affiliate</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="action_view_affiliate_sales" type="object" class="oe_stat_button"
+                        icon="fa-handshake-o" invisible="not is_affiliate"
+                        groups="isd_affiliate.group_affiliate_manager">
+                    <field name="affiliate_sale_count" widget="statinfo" string="Referred"/>
+                </button>
+            </div>
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <field name="is_affiliate" invisible="1"/>
+                <div class="o_isd_affiliate_box border rounded p-3 mb-3" invisible="not is_affiliate"
+                     groups="isd_affiliate.group_affiliate_manager">
+                    <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                        <strong>Affiliate</strong>
+                        <field name="affiliate_state" widget="badge" readonly="1"
+                               decoration-warning="affiliate_state == 'pending'"
+                               decoration-success="affiliate_state == 'approved'"
+                               decoration-danger="affiliate_state == 'rejected'"/>
+                        <button name="action_affiliate_approve" type="object" string="Approve"
+                                class="btn-sm btn-primary" invisible="affiliate_state == 'approved'"/>
+                        <button name="action_affiliate_reject" type="object" string="Reject"
+                                class="btn-sm btn-secondary" invisible="affiliate_state == 'rejected'"
+                                confirm="A rejected affiliate has no link and their referrals stop counting. Continue?"/>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="affiliate_code"/>
+                            <field name="affiliate_source_id" options="{'no_create': True, 'no_open': True}"/>
+                        </group>
+                        <group>
+                            <field name="affiliate_link" widget="CopyClipboardChar"
+                                   invisible="not affiliate_link"/>
+                            <div colspan="2" class="text-muted" invisible="affiliate_link">
+                                No link yet: set the base URL in Affiliate › Configuration, and approve the affiliate.
+                            </div>
+                        </group>
+                    </group>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Affiliate cards: the contact card, with the code and status -->
+    <record id="view_partner_kanban_affiliate" model="ir.ui.view">
+        <field name="name">res.partner.kanban.affiliate</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="mode">primary</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <field name="email" position="after">
+                <div class="d-flex flex-wrap gap-2 mt-1">
+                    <field name="affiliate_code" class="text-muted font-monospace"/>
+                    <field name="affiliate_state" widget="badge"
+                           decoration-warning="affiliate_state == 'pending'"
+                           decoration-success="affiliate_state == 'approved'"
+                           decoration-danger="affiliate_state == 'rejected'"/>
+                </div>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_partner_list_affiliate" model="ir.ui.view">
+        <field name="name">res.partner.list.affiliate</field>
+        <field name="model">res.partner</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <list string="Affiliates">
+                <field name="complete_name" string="Name"/>
+                <field name="affiliate_code"/>
+                <field name="email" optional="show"/>
+                <field name="phone" optional="show"/>
+                <field name="affiliate_sale_count" string="Referred Orders" optional="show"/>
+                <field name="affiliate_state" widget="badge"
+                       decoration-warning="affiliate_state == 'pending'"
+                       decoration-success="affiliate_state == 'approved'"
+                       decoration-danger="affiliate_state == 'rejected'"/>
+                <field name="create_date" string="Joined" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_partner_search_affiliate" model="ir.ui.view">
+        <field name="name">res.partner.search.affiliate</field>
+        <field name="model">res.partner</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <search string="Affiliates">
+                <field name="name" filter_domain="['|', '|', '|', ('complete_name', 'ilike', self), ('email', 'ilike', self), ('phone', 'ilike', self), ('affiliate_code', 'ilike', self)]"/>
+                <field name="affiliate_code"/>
+                <filter string="Waiting for Approval" name="pending" domain="[('affiliate_state', '=', 'pending')]"/>
+                <filter string="Approved" name="approved" domain="[('affiliate_state', '=', 'approved')]"/>
+                <filter string="Rejected" name="rejected" domain="[('affiliate_state', '=', 'rejected')]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Status" name="group_state" context="{'group_by': 'affiliate_state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Affiliates only. The domain sits on the action, not in a filter, so
+         clearing the search never shows the other contacts -->
+    <record id="action_affiliate" model="ir.actions.act_window">
+        <field name="name">Affiliates</field>
+        <field name="path">affiliates</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('is_affiliate', '=', True)]</field>
+        <field name="context">{'default_is_affiliate': True, 'default_is_company': False}</field>
+        <field name="search_view_id" ref="view_partner_search_affiliate"/>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('view_partner_kanban_affiliate')}),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_partner_list_affiliate')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('base.view_partner_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No affiliate yet</p>
+            <p>Affiliates appear here when they sign up on /affiliate/register, or when a contact is set to Affiliate.</p>
+        </field>
+    </record>
+</odoo>

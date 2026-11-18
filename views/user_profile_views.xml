@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_user_profile_form_affiliate" model="ir.ui.view">
+        <field name="name">user.profile.form.affiliate</field>
+        <field name="model">user.profile</field>
+        <field name="inherit_id" ref="isd_profile_management.view_user_profile_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='profile_id']" position="after">
+                <field name="affiliate_id" options="{'no_create': True}"
+                       groups="isd_profile_management.group_profile_manager"/>
+                <field name="affiliate_source_id" options="{'no_create': True}" invisible="not affiliate_id"
+                       groups="isd_profile_management.group_profile_manager"/>
+                <field name="package_has_product" invisible="1"/>
+                <label for="sale_order_id" groups="sales_team.group_sale_salesman"
+                       invisible="not package_has_product and not sale_order_id"/>
+                <div class="o_row" groups="sales_team.group_sale_salesman"
+                     invisible="not package_has_product and not sale_order_id">
+                    <field name="sale_order_id"/>
+                    <button name="action_create_sale_order" type="object" string="Create Sale Order"
+                            class="btn-link" icon="fa-plus" invisible="sale_order_id or not package_has_product"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

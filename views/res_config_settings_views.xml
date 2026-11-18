@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_affiliate" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.affiliate</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="Affiliate" name="isd_affiliate" groups="isd_affiliate.group_affiliate_manager">
+                    <block title="Referral links">
+                        <setting string="Base URL"
+                                 help="Where referral links point. This does not change Odoo's own web address.">
+                            <field name="isd_affiliate_base_url" placeholder="https://bloompod.vn"/>
+                            <div class="text-muted mt-1">Each link adds <code>?ref=&lt;code&gt;&amp;ssm=&lt;source&gt;</code>.</div>
+                        </setting>
+                    </block>
+                    <block title="Sign-up">
+                        <setting help="Anyone can register as an affiliate on /affiliate/register. Affiliates are portal users: they never get into the back office.">
+                            <field name="isd_affiliate_signup_enabled"/>
+                        </setting>
+                        <setting help="New affiliates wait for a manager to approve them. Until then they have no link and their referrals are not counted.">
+                            <field name="isd_affiliate_require_approval"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_affiliate_config" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="path">affiliate-settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 'isd_affiliate', 'bin_size': False}</field>
+    </record>
+</odoo>

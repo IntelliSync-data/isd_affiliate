@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_root" name="Affiliate" sequence="46"
+              web_icon="isd_affiliate,static/description/icon.png"
+              groups="isd_affiliate.group_affiliate_manager"/>
+    <menuitem id="menu_affiliates" name="Affiliates" parent="menu_root" sequence="10"
+              action="action_affiliate"/>
+    <menuitem id="menu_sources" name="Sources" parent="menu_root" sequence="20"
+              action="action_affiliate_source"/>
+    <menuitem id="menu_configuration" name="Configuration" parent="menu_root" sequence="90"
+              action="action_affiliate_config" groups="base.group_system"/>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_affiliate_source_manager,affiliate source manager,model_isd_affiliate_source,group_affiliate_manager,1,1,1,1
+access_affiliate_source_user,affiliate source user,model_isd_affiliate_source,base.group_user,1,0,0,0

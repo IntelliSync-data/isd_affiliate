@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_affiliate_source_list" model="ir.ui.view">
+        <field name="name">isd.affiliate.source.list</field>
+        <field name="model">isd.affiliate.source</field>
+        <field name="arch" type="xml">
+            <list string="Sources">
+                <field name="sequence" widget="handle"/>
+                <field name="icon" widget="image" options="{'size': [24, 24]}"/>
+                <field name="name"/>
+                <field name="key"/>
+                <field name="description" optional="show"/>
+                <field name="status" widget="badge" decoration-success="status == 'active'"
+                       decoration-muted="status == 'inactive'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_affiliate_source_form" model="ir.ui.view">
+        <field name="name">isd.affiliate.source.form</field>
+        <field name="model">isd.affiliate.source</field>
+        <field name="arch" type="xml">
+            <form string="Source">
+                <header>
+                    <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
+                </header>
+                <sheet>
+                    <field name="icon" widget="image" class="oe_avatar" options="{'size': [64, 64]}"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="e.g. TikTok"/></h1>
+                    </div>
+                    <group>
+                        <field name="key" placeholder="tiktok"/>
+                        <field name="description" placeholder="Where and how affiliates use this source"/>
+                    </group>
+                    <div class="text-muted">
+                        The key goes into each referral link as <code>ssm=&lt;key&gt;</code>. It is filled in from the
+                        name and can be changed.
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_affiliate_source_search" model="ir.ui.view">
+        <field name="name">isd.affiliate.source.search</field>
+        <field name="model">isd.affiliate.source</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="key"/>
+                <filter string="Active" name="active_sources" domain="[('status', '=', 'active')]"/>
+                <filter string="Inactive" name="inactive_sources" domain="[('status', '=', 'inactive')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_affiliate_source" model="ir.actions.act_window">
+        <field name="name">Sources</field>
+        <field name="path">affiliate-sources</field>
+        <field name="res_model">isd.affiliate.source</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Add a place affiliates share their links</p>
+            <p>Each source gives a link of its own, so you can tell TikTok sales from Facebook ones.</p>
+        </field>
+    </record>
+</odoo>

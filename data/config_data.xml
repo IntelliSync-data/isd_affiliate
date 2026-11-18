@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Sign-up is open out of the box; a manager can close it in Settings -->
+    <record id="param_signup_enabled" model="ir.config_parameter">
+        <field name="key">isd_affiliate.signup_enabled</field>
+        <field name="value">True</field>
+    </record>
+</odoo>

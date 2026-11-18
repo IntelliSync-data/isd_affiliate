@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_affiliate" model="ir.ui.view">
+        <field name="name">sale.order.form.affiliate</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="client_order_ref" position="after">
+                <field name="affiliate_id" options="{'no_create': True}"/>
+                <field name="affiliate_source_id" options="{'no_create': True}" invisible="not affiliate_id"/>
+                <field name="profile_order_id" invisible="not profile_order_id"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Quotations and orders lists share this one -->
+    <record id="view_quotation_tree_affiliate" model="ir.ui.view">
+        <field name="name">sale.order.list.affiliate</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>
+        <field name="arch" type="xml">
+            <field name="client_order_ref" position="after">
+                <field name="affiliate_id" optional="show"/>
+                <field name="affiliate_source_id" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_sales_order_filter_affiliate" model="ir.ui.view">
+        <field name="name">sale.order.search.affiliate</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <filter name="salesperson" position="before">
+                <filter string="Affiliate" name="group_affiliate" context="{'group_by': 'affiliate_id'}"/>
+                <filter string="Affiliate Source" name="group_affiliate_source" context="{'group_by': 'affiliate_source_id'}"/>
+            </filter>
+            <xpath expr="//search" position="inside">
+                <field name="affiliate_id"/>
+                <filter string="From an Affiliate" name="from_affiliate" domain="[('affiliate_id', '!=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
