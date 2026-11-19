@@ -19,7 +19,7 @@ Affiliate marketing for Profile Management packages.
     'author': 'IntelliSyncData',
     'website': 'https://intellisyncdata.com',
     'license': 'LGPL-3',
-    'depends': ['contacts', 'portal', 'auth_signup', 'sale', 'isd_profile_management'],
+    'depends': ['contacts', 'portal', 'auth_signup', 'sales_team', 'sale', 'isd_profile_management'],
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
