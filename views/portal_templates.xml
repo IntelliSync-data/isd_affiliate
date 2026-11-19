@@ -134,7 +134,8 @@
                     <img src="/web/binary/company_logo" alt="Logo" class="o_isd_affiliate_logo"/>
                     <div class="d-flex align-items-center gap-3 small">
                         <span class="text-muted d-none d-sm-inline" t-out="affiliate.email"/>
-                        <a href="/my/account" class="text-decoration-none">My details</a>
+                        <!-- Hidden for now: /my/account still shows the site header and footer
+                        <a href="/my/account" class="text-decoration-none">My details</a> -->
                         <a href="/web/session/logout?redirect=/login-affiliate" class="btn btn-sm btn-outline-secondary">Log out</a>
                     </div>
                 </div>
