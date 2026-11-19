@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-18 15:46+0000\n"
-"PO-Revision-Date: 2026-11-18 15:46+0000\n"
+"POT-Creation-Date: 2026-11-19 15:09+0000\n"
+"PO-Revision-Date: 2026-11-19 15:09+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -91,6 +91,11 @@ msgid "Affiliate code"
 msgstr "Mã thành viên"
 
 #. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.login
+msgid "Affiliate sign-in"
+msgstr "Đăng nhập tiếp thị liên kết"
+
+#. module: isd_affiliate
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
 msgid "Affiliate sign-up is closed at the moment."
 msgstr "Hiện chưa mở đăng ký tiếp thị liên kết."
@@ -106,9 +111,9 @@ msgstr "Người tiếp thị"
 #. module: isd_affiliate
 #: model_terms:ir.actions.act_window,help:isd_affiliate.action_affiliate
 msgid ""
-"Affiliates appear here when they sign up on /affiliate/register, or when a "
+"Affiliates appear here when they sign up on /register-affiliate, or when a "
 "contact is set to Affiliate."
-msgstr "Người tiếp thị xuất hiện ở đây khi họ đăng ký tại /affiliate/register, hoặc khi một liên hệ được đặt loại Tiếp thị liên kết."
+msgstr "Người tiếp thị xuất hiện ở đây khi họ đăng ký tại /register-affiliate, hoặc khi một liên hệ được đặt loại Tiếp thị liên kết."
 
 #. module: isd_affiliate
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
@@ -135,9 +140,9 @@ msgstr "Key này đã được nguồn khác dùng."
 #. module: isd_affiliate
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.res_config_settings_view_form_affiliate
 msgid ""
-"Anyone can register as an affiliate on /affiliate/register. Affiliates are "
+"Anyone can register as an affiliate on /register-affiliate. Affiliates are "
 "portal users: they never get into the back office."
-msgstr "Ai cũng đăng ký làm người tiếp thị được tại /affiliate/register. Họ là user portal: không bao giờ vào được trang quản trị."
+msgstr "Ai cũng đăng ký làm người tiếp thị được tại /register-affiliate. Họ là user portal: không bao giờ vào được trang quản trị."
 
 #. module: isd_affiliate
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.view_partner_form_affiliate
@@ -167,6 +172,7 @@ msgid "Base URL"
 msgstr "Base URL"
 
 #. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.login
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.login_affiliate_link
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
 msgid "Become an affiliate"
@@ -263,6 +269,7 @@ msgid ""
 msgstr "Mỗi nguồn có link riêng, nên phân biệt được đơn đến từ TikTok hay Facebook."
 
 #. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.login
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
 msgid "Email"
 msgstr "Email"
@@ -271,6 +278,11 @@ msgstr "Email"
 #: model:isd.affiliate.source,name:isd_affiliate.source_facebook
 msgid "Facebook"
 msgstr "Facebook"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.login
+msgid "Forgot password?"
+msgstr "Quên mật khẩu?"
 
 #. module: isd_affiliate
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.view_sales_order_filter_affiliate
@@ -290,8 +302,8 @@ msgstr "Link chung"
 #. module: isd_affiliate
 #: model:res.groups,comment:isd_affiliate.group_affiliate_portal
 msgid ""
-"Given to affiliates who sign up. Their own page only, on /my/affiliate."
-msgstr "Cấp cho người tiếp thị tự đăng ký. Chỉ xem trang riêng của mình tại /my/affiliate."
+"Given to affiliates who sign up. Their own page only, on /my-affiliate."
+msgstr "Cấp cho người tiếp thị tự đăng ký. Chỉ xem trang riêng của mình tại /my-affiliate."
 
 #. module: isd_affiliate
 #: model:ir.model.fields,help:isd_affiliate.field_isd_affiliate_source__key
@@ -311,8 +323,8 @@ msgstr "Tôi đồng ý với điều khoản tiếp thị liên kết"
 
 #. module: isd_affiliate
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
-msgid "I already have an account"
-msgstr "Tôi đã có tài khoản"
+msgid "I already have an affiliate account"
+msgstr "Tôi đã có tài khoản tiếp thị"
 
 #. module: isd_affiliate
 #: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__id
@@ -363,8 +375,8 @@ msgstr "Cập nhật lúc"
 
 #. module: isd_affiliate
 #: model:ir.model.fields,help:isd_affiliate.field_res_config_settings__isd_affiliate_signup_enabled
-msgid "Lets anyone register as an affiliate on /affiliate/register"
-msgstr "Cho phép ai cũng đăng ký làm người tiếp thị tại /affiliate/register"
+msgid "Lets anyone register as an affiliate on /register-affiliate"
+msgstr "Cho phép ai cũng đăng ký làm người tiếp thị tại /register-affiliate"
 
 #. module: isd_affiliate
 #: model:ir.model.fields,field_description:isd_affiliate.field_res_partner__affiliate_source_id
@@ -379,11 +391,27 @@ msgid "Link a product to the package first."
 msgstr "Hãy gắn sản phẩm cho gói trước."
 
 #. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Log out"
+msgstr "Đăng xuất"
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.auth_card
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "Logo"
+msgstr "Logo"
+
+#. module: isd_affiliate
 #: model:res.groups,comment:isd_affiliate.group_affiliate_manager
 msgid ""
 "Manages affiliates, sources and approvals, and sees the orders they "
 "referred."
 msgstr "Quản lý người tiếp thị, nguồn và việc duyệt, xem các đơn họ giới thiệu."
+
+#. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.portal_my_affiliate
+msgid "My details"
+msgstr "Thông tin của tôi"
 
 #. module: isd_affiliate
 #: model:ir.model.fields,field_description:isd_affiliate.field_isd_affiliate_source__name
@@ -460,6 +488,7 @@ msgid "Paid orders total"
 msgstr "Tổng tiền đơn đã thanh toán"
 
 #. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.login
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
 msgid "Password"
 msgstr "Mật khẩu"
@@ -586,6 +615,11 @@ msgid "Settings"
 msgstr "Cài đặt"
 
 #. module: isd_affiliate
+#: model_terms:ir.ui.view,arch_db:isd_affiliate.login
+msgid "Sign in"
+msgstr "Đăng nhập"
+
+#. module: isd_affiliate
 #: model_terms:ir.ui.view,arch_db:isd_affiliate.signup
 msgid "Sign up"
 msgstr "Đăng ký"
@@ -661,6 +695,12 @@ msgstr "Mã thành viên này đã được dùng."
 
 #. module: isd_affiliate
 #. odoo-python
+#: code:addons/isd_affiliate/controllers/login.py:0
+msgid "This is not an affiliate account. Please use the regular sign-in page."
+msgstr "Đây không phải tài khoản tiếp thị liên kết. Vui lòng dùng trang đăng nhập thông thường."
+
+#. module: isd_affiliate
+#. odoo-python
 #: code:addons/isd_affiliate/models/user_profile.py:0
 msgid "This order already has a Sale Order."
 msgstr "Đơn này đã có đơn bán hàng."
@@ -675,6 +715,12 @@ msgstr "Gói này đã có sản phẩm."
 #: model:isd.affiliate.source,name:isd_affiliate.source_tiktok
 msgid "TikTok"
 msgstr "TikTok"
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/login.py:0
+msgid "Too many failed sign-ins. Please wait a few minutes."
+msgstr "Đăng nhập sai quá nhiều lần. Vui lòng đợi vài phút."
 
 #. module: isd_affiliate
 #. odoo-python
@@ -720,6 +766,12 @@ msgstr "Nơi link giới thiệu trỏ tới, ví dụ https://bloompod.vn. Mỗ
 msgid ""
 "Where referral links point. This does not change Odoo's own web address."
 msgstr "Nơi link giới thiệu trỏ tới. Không thay đổi địa chỉ web của Odoo."
+
+#. module: isd_affiliate
+#. odoo-python
+#: code:addons/isd_affiliate/controllers/login.py:0
+msgid "Wrong email or password."
+msgstr "Sai email hoặc mật khẩu."
 
 #. module: isd_affiliate
 #: model:isd.affiliate.source,name:isd_affiliate.source_youtube
