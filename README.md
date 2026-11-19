@@ -81,7 +81,7 @@ Thêm hai trường, đều không bắt buộc. Các trường hiện có giữ
 | `affiliate_ref` | giá trị `ref` trên URL (mã thành viên) |
 | `affiliate_source` | giá trị `ssm` trên URL (key của nguồn) |
 
-Backend **không bao giờ từ chối đơn** vì `ref`. Mã sai, người tiếp thị chưa được duyệt, hoặc khách tự giới thiệu chính mình (cùng liên hệ hoặc cùng email) thì đơn vẫn tạo bình thường, chỉ là không ghi nhận người tiếp thị. Key nguồn sai thì vẫn ghi nhận người tiếp thị, chỉ bỏ nguồn.
+Backend **không bao giờ từ chối đơn** vì `ref`. Mã sai, người tiếp thị chưa được duyệt, hoặc khách tự giới thiệu chính mình (cùng liên hệ hoặc cùng email) thì đơn vẫn tạo bình thường, chỉ là không ghi nhận người tiếp thị. Key nguồn sai hoặc không có (link chung, không kèm `ssm=`) thì vẫn ghi nhận người tiếp thị, nguồn mặc định là **Website**.
 
 ### 3. Xem lại: `POST /api/profile/order-info`
 

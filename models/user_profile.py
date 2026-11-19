@@ -50,6 +50,10 @@ class UserProfile(models.Model):
             _logger.info('isd_affiliate: order by %s ignored as a self-referral', affiliate.affiliate_code)
             return Partner.browse(), self.env['isd.affiliate.source'].browse()
         source = self.env['isd.affiliate.source']._by_key(self.env.context.get(SOURCE_KEY))
+        if not source:
+            # Link chung không có ssm=, hoặc ssm sai/không active: coi như đến
+            # từ website thay vì bỏ trống nguồn.
+            source = self.env['isd.affiliate.source']._by_key('website')
         return affiliate, source
 
     @api.model_create_multi

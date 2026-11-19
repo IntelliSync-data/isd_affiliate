@@ -18,6 +18,7 @@ class AffiliateCase(TransactionCase):
         super().setUpClass()
         cls.env['ir.config_parameter'].sudo().set_param('isd_affiliate.base_url', 'https://bloompod.vn')
         cls.tiktok = cls.env.ref('isd_affiliate.source_tiktok')
+        cls.website = cls.env.ref('isd_affiliate.source_website')
         cls.affiliate = cls.env['res.partner'].create({
             'name': 'Lan Affiliate', 'email': 'lan@affiliate.test', 'is_affiliate': True})
 
