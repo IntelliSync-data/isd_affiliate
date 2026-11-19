@@ -7,8 +7,14 @@ ORDER_LIMIT = 50
 
 class AffiliatePortal(http.Controller):
 
-    @http.route('/my/affiliate', type='http', auth='user', website=True, sitemap=False)
+    @http.route('/my/affiliate', type='http', auth='public', sitemap=False)
+    def my_affiliate_old_address(self, **kw):
+        return request.redirect('/my-affiliate', code=301)
+
+    @http.route('/my-affiliate', type='http', auth='public', website=True, sitemap=False)
     def my_affiliate(self, **kw):
+        if request.env.user._is_public():
+            return request.redirect('/login-affiliate')
         partner = request.env.user.partner_id
         if not partner.is_affiliate:
             return request.redirect('/my')

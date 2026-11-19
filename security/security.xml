@@ -18,6 +18,6 @@
     <record id="group_affiliate_portal" model="res.groups">
         <field name="name">Affiliate (portal)</field>
         <field name="category_id" ref="base.module_category_hidden"/>
-        <field name="comment">Given to affiliates who sign up. Their own page only, on /my/affiliate.</field>
+        <field name="comment">Given to affiliates who sign up. Their own page only, on /my-affiliate.</field>
     </record>
 </odoo>

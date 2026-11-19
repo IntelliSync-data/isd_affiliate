@@ -11,7 +11,7 @@ class ResConfigSettings(models.TransientModel):
         help='Where referral links point, e.g. https://bloompod.vn. Each link adds ?ref=<code>&ssm=<source>.')
     isd_affiliate_signup_enabled = fields.Boolean(
         string='Open Sign-up', config_parameter='isd_affiliate.signup_enabled',
-        help='Lets anyone register as an affiliate on /affiliate/register')
+        help='Lets anyone register as an affiliate on /register-affiliate')
     isd_affiliate_require_approval = fields.Boolean(
         string='Approve New Affiliates', config_parameter='isd_affiliate.require_approval',
         help='New affiliates wait for a manager: until then they have no link and their referrals are not counted')

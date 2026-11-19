@@ -33,14 +33,19 @@ class AffiliateSignup(http.Controller):
     def _render(self, values):
         return request.render('isd_affiliate.signup', values)
 
-    @http.route('/affiliate/register', type='http', auth='public', methods=['GET', 'POST'],
+    @http.route('/affiliate/register', type='http', auth='public', sitemap=False)
+    def register_old_address(self, **kw):
+        # Links shared before the page moved keep working
+        return request.redirect('/register-affiliate', code=301)
+
+    @http.route('/register-affiliate', type='http', auth='public', methods=['GET', 'POST'],
                 sitemap=False, website=True)
     def register(self, **post):
         Partner = request.env['res.partner']
         if not Partner._affiliate_signup_enabled():
             return self._render({'closed': True})
         if not request.env.user._is_public():
-            return request.redirect('/my/affiliate')
+            return request.redirect('/my-affiliate')
         if request.httprequest.method == 'GET':
             return self._render({})
 
@@ -60,7 +65,7 @@ class AffiliateSignup(http.Controller):
         request.env.cr.commit()
         request.session.authenticate(request.db, {
             'login': login, 'password': post['password'], 'type': 'password'})
-        return request.redirect('/my/affiliate')
+        return request.redirect('/my-affiliate')
 
     def _validate(self, post, values):
         if not values['name']:

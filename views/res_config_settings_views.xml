@@ -15,7 +15,7 @@
                         </setting>
                     </block>
                     <block title="Sign-up">
-                        <setting help="Anyone can register as an affiliate on /affiliate/register. Affiliates are portal users: they never get into the back office.">
+                        <setting help="Anyone can register as an affiliate on /register-affiliate. Affiliates are portal users: they never get into the back office.">
                             <field name="isd_affiliate_signup_enabled"/>
                         </setting>
                         <setting help="New affiliates wait for a manager to approve them. Until then they have no link and their referrals are not counted.">
