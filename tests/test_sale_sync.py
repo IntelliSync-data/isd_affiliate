@@ -62,10 +62,16 @@ class TestSaleSync(AffiliateCase):
         self.assertFalse(self._order(self.affiliate.affiliate_code, partner=self.affiliate).affiliate_id, 'self')
         same_email = self.env['res.partner'].create({'name': 'Lan again', 'email': 'LAN@affiliate.test'})
         self.assertFalse(self._order(self.affiliate.affiliate_code, partner=same_email).affiliate_id, 'self by email')
-        # An unknown source key still keeps the affiliate
+        # An unknown source key still keeps the affiliate, source falls back to website
         order = self._order(self.affiliate.affiliate_code, 'nope')
         self.assertEqual(order.affiliate_id, self.affiliate)
-        self.assertFalse(order.affiliate_source_id)
+        self.assertEqual(order.affiliate_source_id, self.website)
+
+    def test_missing_source_defaults_to_website(self):
+        # The shared link has no ssm= at all (ref= only)
+        order = self._order(self.affiliate.affiliate_code)
+        self.assertEqual(order.affiliate_id, self.affiliate)
+        self.assertEqual(order.affiliate_source_id, self.website)
 
     def test_package_without_product_has_no_sale(self):
         order = self._order(package=self._package(product=False))
